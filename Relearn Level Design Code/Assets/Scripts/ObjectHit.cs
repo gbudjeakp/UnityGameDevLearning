@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-    
+
     private void OnCollisionEnter(Collision other)
     {
-        GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
+        if(other.gameObject.tag == "Player")
+        {
+            GetComponent<MeshRenderer>().material.color = Color.red;
+        } 
+
     }
 }
