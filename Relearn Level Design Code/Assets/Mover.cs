@@ -9,7 +9,6 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      Greeter();
     }
 
     // Update is called once per frame
@@ -19,11 +18,6 @@ public class Mover : MonoBehaviour
     }
 
     //Practicing Methods 
-    void Greeter(){
-        Debug.Log("Welcome to Kubaz");
-        Debug.Log("Our controls are ASWD");
-        Debug.Log("Do not hit the Walls");
-    }
     void Movement()
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
