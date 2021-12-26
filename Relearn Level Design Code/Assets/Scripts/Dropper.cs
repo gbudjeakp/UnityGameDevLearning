@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-   MeshRenderer renderer;
+  new MeshRenderer renderer;
     Rigidbody rigidBody;
     [SerializeField] float timeToWait = 5f;
 

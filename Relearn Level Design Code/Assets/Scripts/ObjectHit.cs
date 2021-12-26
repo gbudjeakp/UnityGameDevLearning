@@ -8,7 +8,7 @@ public class ObjectHit : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            GetComponent<MeshRenderer>().material.color = Color.red;
+            GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
             gameObject.tag = "Hit";
         }
     }
