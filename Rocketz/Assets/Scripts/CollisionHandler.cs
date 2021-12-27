@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CollisionHandler : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        switch (other.gameObject.tag)
+        string comparator = other.gameObject.tag;
+        switch (comparator)
         {
             case "Fuel":
                 Debug.Log("Got more Fuel");
@@ -16,8 +19,14 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("Landing Successful");
                 break;
             default:
-                Debug.Log("Player Died");
+               respawner();
                 break;
         }
+    }
+
+    void respawner()
+    {
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+     SceneManager.LoadScene(currentSceneIndex);
     }
 }
