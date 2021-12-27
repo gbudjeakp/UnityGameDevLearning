@@ -315,6 +315,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -414,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 6445101846209435899, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
 --- !u!1001 &4834244282002361461
@@ -426,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 4179341432476545228, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
       propertyPath: m_Name
       value: Launch pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179341432476545228, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 5065310567531734990, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
       propertyPath: m_RootOrder
@@ -528,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 4650939046139488708, guid: 43378b661bf143942bb28cf3ab311860, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43378b661bf143942bb28cf3ab311860, type: 3}
 --- !u!1001 &8300717824508560904
@@ -551,15 +567,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8300717824622266732, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.78
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8300717824622266732, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9205
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 8300717824622266732, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.93
+      value: 17.42
       objectReference: {fileID: 0}
     - target: {fileID: 8300717824622266732, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -645,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 877827614120662842, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
       propertyPath: m_Name
       value: Landing pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 877827614120662842, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
