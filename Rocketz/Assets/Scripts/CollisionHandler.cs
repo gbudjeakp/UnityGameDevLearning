@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    AudioSource audioSource;
     [SerializeField] float delay = 1f;
     private void OnCollisionEnter(Collision other)
     {
@@ -30,6 +31,7 @@ public class CollisionHandler : MonoBehaviour
     void startCrashSequence()
     {
         // Add SFX upon crash
+
 
         //Add particle effect upon crash
         GetComponent<Movement>().enabled = false;

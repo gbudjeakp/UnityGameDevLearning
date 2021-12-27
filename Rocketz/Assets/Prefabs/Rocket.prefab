@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketThrust: 900
   rotationThrust: 200
+  engineThruster: {fileID: 0}
 --- !u!82 &359306885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -238,3 +239,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac182740367fcf34e82d6967f24c52e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 1

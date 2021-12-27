@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] float rocketThrust = 1000f;
     [SerializeField] float rotationThrust = 200f;
+    [SerializeField] AudioClip engineThruster;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * rocketThrust * Time.deltaTime);
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(engineThruster);
             }
 
         }
