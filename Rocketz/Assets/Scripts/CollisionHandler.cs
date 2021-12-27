@@ -16,17 +16,29 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("On Launch Pad");
                 break;
             case "Finish":
-                Debug.Log("Landing Successful");
+                nextLevel();
                 break;
             default:
-               respawner();
+                respawner();
                 break;
         }
     }
 
     void respawner()
     {
-    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-     SceneManager.LoadScene(currentSceneIndex);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void nextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);
+
     }
 }

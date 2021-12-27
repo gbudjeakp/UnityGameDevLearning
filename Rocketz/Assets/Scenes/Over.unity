@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 5a6aaf7786644bc42ae9c100f86dadb3, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: cb267ded1bca0964fb4764c6a5517ecf, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e43a10eaa4302e745a3efd7557abd835, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -219,23 +219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &695826168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6445101846209435899, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-  m_PrefabInstance: {fileID: 4672697357801526883}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &695826176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695826168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac182740367fcf34e82d6967f24c52e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,70 +402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: m_Pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 359306885, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5717013393377023543, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -531,10 +450,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 6445101846209435899, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7883b94e51c9dd4783441f48ec76ea8, type: 3}
 --- !u!1001 &4834244282002361461
@@ -547,10 +462,6 @@ PrefabInstance:
     - target: {fileID: 4179341432476545228, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
       propertyPath: m_Name
       value: Launch pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 4179341432476545228, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 5065310567531734990, guid: e7413234ecfbdd643abf603e36d2de7b, type: 3}
       propertyPath: m_RootOrder
@@ -653,10 +564,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
-    - target: {fileID: 4650939046139488708, guid: 43378b661bf143942bb28cf3ab311860, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43378b661bf143942bb28cf3ab311860, type: 3}
 --- !u!1001 &8300717824508560904
@@ -670,10 +577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
-    - target: {fileID: 8300717824622266730, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1369d8dad302f3144861dfd2cdfd003b, type: 2}
     - target: {fileID: 8300717824622266732, guid: a2904a54f6ee57641b757f5b55339f9e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -774,10 +677,6 @@ PrefabInstance:
     - target: {fileID: 877827614120662842, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
       propertyPath: m_Name
       value: Landing pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 877827614120662842, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
-      propertyPath: m_TagString
-      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1101a0f353d8d704f8c1ab35794834c0, type: 3}
