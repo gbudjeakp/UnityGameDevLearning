@@ -4,24 +4,36 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float delay = 1f;
     private void OnCollisionEnter(Collision other)
     {
         string comparator = other.gameObject.tag;
         switch (comparator)
         {
-            case "Fuel":
-                Debug.Log("Got more Fuel");
-                break;
             case "Friendly":
                 Debug.Log("On Launch Pad");
                 break;
             case "Finish":
-                nextLevel();
+                startSuccessSequence();
                 break;
             default:
-                respawner();
+                startCrashSequence();
                 break;
         }
+    }
+
+    void startSuccessSequence()
+    {
+        Invoke("nextLevel", delay);
+    }
+
+    void startCrashSequence()
+    {
+        // Add SFX upon crash
+
+        //Add particle effect upon crash
+        GetComponent<Movement>().enabled = false;
+        Invoke("respawner", delay);
     }
 
     void respawner()
