@@ -54,7 +54,7 @@ public class CollisionHandler : MonoBehaviour
     {
         isTransitioning = true;
         // Add SFX upon crash
-         audioSource.Stop();
+        audioSource.Stop();
         audioSource.PlayOneShot(crashSound);
 
 
