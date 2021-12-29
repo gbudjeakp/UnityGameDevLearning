@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     AudioSource audioSource;
 
 
-    //Serialized variables 
+    //Serialized variables for adjusting values
     [SerializeField] float rocketThrust = 1000f;
     [SerializeField] float rotationThrust = 200f;
     [SerializeField] AudioClip engineThruster;

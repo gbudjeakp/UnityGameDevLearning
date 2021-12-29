@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     AudioSource audioSource;
+    [SerializeField] AudioClip crashSound;
+    [SerializeField] AudioClip success;
     [SerializeField] float delay = 1f;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnCollisionEnter(Collision other)
     {
         string comparator = other.gameObject.tag;
@@ -25,13 +32,33 @@ public class CollisionHandler : MonoBehaviour
 
     void startSuccessSequence()
     {
+
+        // Add SFX upon success
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(success);
+            Debug.Log("Sound");
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+        GetComponent<Movement>().enabled = false;
         Invoke("nextLevel", delay);
     }
 
     void startCrashSequence()
     {
-        // Add SFX upon crash
 
+        // Add SFX upon crash
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(crashSound);
+        }
+        else
+        {
+            audioSource.Stop();
+        }
 
         //Add particle effect upon crash
         GetComponent<Movement>().enabled = false;
