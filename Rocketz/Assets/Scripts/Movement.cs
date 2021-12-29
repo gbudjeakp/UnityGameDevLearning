@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    // Cached refrences for speed and readability
     Rigidbody rb;
     AudioSource audioSource;
 
 
+    //Serialized variables 
     [SerializeField] float rocketThrust = 1000f;
     [SerializeField] float rotationThrust = 200f;
     [SerializeField] AudioClip engineThruster;
