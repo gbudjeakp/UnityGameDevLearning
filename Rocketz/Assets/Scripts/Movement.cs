@@ -7,6 +7,9 @@ public class Movement : MonoBehaviour
     // Cached refrences for speed and readability
     Rigidbody rb;
     AudioSource audioSource;
+    [SerializeField] ParticleSystem leftThruster;
+    [SerializeField] ParticleSystem rightThruster;
+    [SerializeField] ParticleSystem rocketBooster;
 
 
     //Serialized variables for adjusting values
@@ -35,16 +38,23 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * rocketThrust * Time.deltaTime);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(engineThruster);
-            }
+            startThrusting();
 
         }
         else
         {
             audioSource.Stop();
+            rocketBooster.Stop();
+        }
+    }
+
+    private void startThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * rocketThrust * Time.deltaTime);
+        if (!audioSource.isPlaying)
+        {
+            rocketBooster.Play();
+            audioSource.PlayOneShot(engineThruster);
         }
     }
 
@@ -52,11 +62,38 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            applyRotation(rotationThrust);
+            rotatingLeft();
+
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            applyRotation(-rotationThrust);
+            rotatingRight();
+        }
+    }
+
+    private void rotatingRight()
+    {
+        applyRotation(-rotationThrust);
+        if (!rightThruster.isPlaying)
+        {
+            rightThruster.Play();
+        }
+        else
+        {
+            rightThruster.Stop();
+        }
+    }
+
+    private void rotatingLeft()
+    {
+        applyRotation(rotationThrust);
+        if (!leftThruster.isPlaying)
+        {
+            leftThruster.Play();
+        }
+        else
+        {
+            leftThruster.Stop();
         }
     }
 
