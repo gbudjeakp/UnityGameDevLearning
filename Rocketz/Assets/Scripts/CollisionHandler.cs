@@ -9,12 +9,19 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip success;
     [SerializeField] float delay = 1f;
 
+    bool isTransitioning = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
     private void OnCollisionEnter(Collision other)
     {
+        if (isTransitioning)
+        {
+            return;
+        }
+
         string comparator = other.gameObject.tag;
         switch (comparator)
         {
@@ -32,33 +39,25 @@ public class CollisionHandler : MonoBehaviour
 
     void startSuccessSequence()
     {
+        isTransitioning = true;
 
         // Add SFX upon success
-        if (!audioSource.isPlaying)
-        {
-            audioSource.PlayOneShot(success);
-            Debug.Log("Sound");
-        }
-        else
-        {
-            audioSource.Stop();
-        }
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
+
+
         GetComponent<Movement>().enabled = false;
         Invoke("nextLevel", delay);
     }
 
     void startCrashSequence()
     {
-
+        isTransitioning = true;
         // Add SFX upon crash
-        if (!audioSource.isPlaying)
-        {
-            audioSource.PlayOneShot(crashSound);
-        }
-        else
-        {
-            audioSource.Stop();
-        }
+         audioSource.Stop();
+        audioSource.PlayOneShot(crashSound);
+
+
 
         //Add particle effect upon crash
         GetComponent<Movement>().enabled = false;
