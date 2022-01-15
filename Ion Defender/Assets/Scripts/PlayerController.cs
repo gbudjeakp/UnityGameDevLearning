@@ -1,9 +1,14 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] float controlSpeed = 10f;
+    [SerializeField] float xRange = 8f;
+    [SerializeField] float yRange = 7f;
     void Start()
     {
 
@@ -14,13 +19,18 @@ public class PlayerController : MonoBehaviour
     {
         float xThrow = Input.GetAxis("Horizontal");
         float yThrow = Input.GetAxis("Vertical");
-        float xOffset = .02f;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float rawYPos = transform.localPosition.y + yOffset;
 
-        float newXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+
 
         transform.localPosition = new Vector3
-        (newXPos,
-        transform.localPosition.y,
+        (clampedXPos,
+         clampedYPos,
         transform.localPosition.z);
 
 

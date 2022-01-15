@@ -540,13 +540,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.98, y: 4.88, z: -39.97}
+  m_LocalRotation: {x: 0.036577005, y: 0.015424086, z: 0.017050572, w: 0.9990663}
+  m_LocalPosition: {x: 3.76, y: 0.51, z: -22.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446584346}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.161, y: 1.842, z: 2.022}
 --- !u!1001 &1355826283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,12 +555,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 446584346}
     m_Modifications:
     - target: {fileID: 787607031, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
+      propertyPath: xRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 787607031, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
       propertyPath: fire.m_Id
       value: 8dd8a924-cbf4-45c8-82b1-3b348c351017
       objectReference: {fileID: 0}
     - target: {fileID: 787607031, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
       propertyPath: fire.m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 787607031, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
+      propertyPath: controlSpeed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 787607031, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
       propertyPath: movement.m_Id
