@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
         float roll = xThrow * controlRollFactor ;
 
-        //Euler pronounced ouiler
+        //Euler pronounced aouiler
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
