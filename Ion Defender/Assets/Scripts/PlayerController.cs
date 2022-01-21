@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     float yThrow;
     void Start()
     {
-
+        Debug.Log("French Bull Dog kiss lol a");
     }
 
     // Update is called once per frame
@@ -29,7 +29,22 @@ public class PlayerController : MonoBehaviour
     {
         processTranslate();
         processRotation();
+        processFiring();
 
+    }
+
+
+    void processFiring()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            Debug.Log("Shooting");
+        }
+        else
+        {
+            Debug.Log("Don't print shooting");
+        }
+        
     }
 
     void processRotation()

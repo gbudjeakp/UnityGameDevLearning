@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4191894803860548980}
-  m_LocalRotation: {x: 0.036577005, y: 0.015424086, z: 0.017050572, w: 0.9990663}
-  m_LocalPosition: {x: 3.76, y: 0.51, z: -22.8}
+  m_LocalRotation: {x: 0.010655701, y: 0.085413665, z: -0.0038251579, w: 0.99628127}
+  m_LocalPosition: {x: 4.83, y: 2.1, z: -20.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4191894804333762079}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.161, y: 1.842, z: 2.022}
+  m_LocalEulerAnglesHint: {x: 1.254, y: 9.797, z: -0.332}
 --- !u!20 &4191894803860548982
 Camera:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4191894804333762076}
-  m_LocalRotation: {x: 0.03872216, y: 0.23783834, z: 0.004331574, w: 0.97052294}
+  m_LocalRotation: {x: 0.038720377, y: 0.23784085, z: 0.0043285107, w: 0.97052246}
   m_LocalPosition: {x: 268.3, y: 22.67, z: 49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -189,6 +189,18 @@ PrefabInstance:
     - target: {fileID: 1448824581508694685, guid: f46f1cbaa8b302040aa2c5506cac5e63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.861
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551974788290061477, guid: f46f1cbaa8b302040aa2c5506cac5e63, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.15821703
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551974788290061477, guid: f46f1cbaa8b302040aa2c5506cac5e63, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551974788290061477, guid: f46f1cbaa8b302040aa2c5506cac5e63, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.04705884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f46f1cbaa8b302040aa2c5506cac5e63, type: 3}
