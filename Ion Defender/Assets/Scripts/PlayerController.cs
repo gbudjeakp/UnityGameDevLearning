@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 12f;
     [SerializeField] float yRange = 10f;
+    [SerializeField] GameObject[] lasers;
+
 
     [SerializeField] float positionPitchFactor = -4f;
     [SerializeField] float controlPitchFactor = -13f;
@@ -21,7 +24,7 @@ public class PlayerController : MonoBehaviour
     float yThrow;
     void Start()
     {
-        Debug.Log("French Bull Dog kiss lol a");
+  
     }
 
     // Update is called once per frame
@@ -36,16 +39,28 @@ public class PlayerController : MonoBehaviour
 
     void processFiring()
     {
-        if (Input.GetButton("Fire1"))
+        string fire = "Fire1";
+
+        if (Input.GetButton(fire))
         {
-            Debug.Log("Shooting");
+            setLasersActive(true);
         }
         else
         {
-            Debug.Log("Don't print shooting");
+            setLasersActive(false);
         }
         
     }
+
+    void setLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
+    }
+
 
     void processRotation()
     {
