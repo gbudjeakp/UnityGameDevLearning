@@ -7,15 +7,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("General Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input")] 
     [SerializeField] float controlSpeed = 10f;
+    [Tooltip("Controls how far left or right a player can go")]
     [SerializeField] float xRange = 12f;
+    [Tooltip("Control how far up or down a player can move")]
     [SerializeField] float yRange = 10f;
+    [Tooltip("Controls The Lasers array")]
     [SerializeField] GameObject[] lasers;
 
-
+    [Header("Movement Settings")]
+    [Tooltip("controls the position pitch factor")]
     [SerializeField] float positionPitchFactor = -4f;
     [SerializeField] float controlPitchFactor = -13f;
-
     [SerializeField] float positionYawFactor = 2f;
 
     [SerializeField] float controlRollFactor = -20f;
