@@ -5,28 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class CollisonHandler : MonoBehaviour
 {
-    [SerializeField] float delay = 2f;
+    [Tooltip("Controls hw long it takes for scene to reload")]
+    [SerializeField] float delay = 1f;
+    [SerializeField] ParticleSystem deathExplosion;
+    [SerializeField] ParticleSystem enemyDeath;
 
     private void OnTriggerEnter(Collider other)
     {
 
-        death();
+        Death();
 
-    } 
+    }
 
-    void death()
+    void Death()
     {
+        deathExplosion.Play();
         GetComponent<PlayerController>().enabled = false;
-        Invoke("respawner", delay);
+        Invoke("Respawner", delay);
+
+        GetComponent<MeshRenderer>().enabled = false;
     }
 
 
-    void respawner()
+    void Respawner()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
 
-    
+
 
 }
