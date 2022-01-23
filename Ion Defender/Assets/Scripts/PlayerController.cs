@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("General Settings")]
-    [Tooltip("How fast ship moves up and down based upon player input")] 
+    [Tooltip("How fast ship moves up and down based upon player input")]
     [SerializeField] float controlSpeed = 10f;
     [Tooltip("Controls how far left or right a player can go")]
     [SerializeField] float xRange = 12f;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     float yThrow;
     void Start()
     {
-  
+
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             setLasersActive(false);
         }
-        
+
     }
 
     void setLasersActive(bool isActive)
@@ -73,11 +73,11 @@ public class PlayerController : MonoBehaviour
         float pitchDueToControlThrow = yThrow * controlPitchFactor;
         float pitch = pitchDueToPosition + pitchDueToControlThrow;
 
-       
-        float yaw =  transform.localPosition.x * positionYawFactor;
+
+        float yaw = transform.localPosition.x * positionYawFactor;
 
 
-        float roll = xThrow * controlRollFactor ;
+        float roll = xThrow * controlRollFactor;
 
         //Euler pronounced aouiler
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
