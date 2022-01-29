@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3166644204586632930}
   - component: {fileID: 2044059964277819719}
   - component: {fileID: 4303474203714157965}
+  - component: {fileID: 7575338370411013705}
   m_Layer: 0
-  m_Name: StarSparrow17
+  m_Name: Yellon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,6 +83,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7575338370411013705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358195761363016792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e6c90dcf3ac6d4ba7a943f58a370a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDeathVfx: {fileID: 1695688545139133936, guid: 611c6e5987124344fb519f5a7f9e6ae8, type: 3}
+  parent: {fileID: 0}
+  increaseBy: 20
+  enemyHitPoints: 4
 --- !u!1 &2663382954201566833
 GameObject:
   m_ObjectHideFlags: 0

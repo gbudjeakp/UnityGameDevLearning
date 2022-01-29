@@ -4,12 +4,51 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] ParticleSystem enemyDeathVfx;
+    [SerializeField] GameObject enemyDeathVfx;
+    [SerializeField] int increaseBy = 20;
+    [SerializeField] int enemyHitPoints = 4;
+
+
+    ScoreBoard scoreBoard;
+    GameObject parentGameObject;
+
+
+    private void Start()
+    {
+
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRunTime");
+        Addrigidbody();
+    }
+
+    private void Addrigidbody()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+    }
 
     private void OnParticleCollision(GameObject other)
     {
-        Instantiate(enemyDeathVfx, transform.position, Quaternion.identity);
-        Destroy(gameObject);
 
+
+        if (enemyHitPoints < 1)
+        {
+            KillEnemy();
+        }
+        ScoreCounter();
+
+    }
+
+    private void ScoreCounter()
+    {
+        enemyHitPoints--;
+        scoreBoard.IncreaseScore(increaseBy);
+    }
+
+    private void KillEnemy()
+    {
+        GameObject vfx = Instantiate(enemyDeathVfx, transform.position, Quaternion.identity);
+        vfx.transform.parent = parentGameObject.transform;
+        Destroy(gameObject);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7343643212638677017}
   - component: {fileID: 7318463308975138115}
   - component: {fileID: 7329025576287283141}
+  - component: {fileID: 2421889660292778154}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7341184165535629971}
-  m_LocalRotation: {x: -0, y: 0.17730638, z: -0, w: 0.9841557}
+  m_LocalRotation: {x: 0, y: 0.17730802, z: 0, w: 0.9841554}
   m_LocalPosition: {x: 270.82, y: 22.9, z: 47.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -85,6 +86,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2421889660292778154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341184165535629971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e6c90dcf3ac6d4ba7a943f58a370a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDeathVfx: {fileID: 1695688545139133936, guid: 611c6e5987124344fb519f5a7f9e6ae8, type: 3}
+  parent: {fileID: 0}
+  increaseBy: 20
+  enemyHitPoints: 4
 --- !u!1 &7341374058254068533
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class CollisonHandler : MonoBehaviour
 {
-    [Tooltip("Controls hw long it takes for scene to reload")]
-    [SerializeField] float delay = 1f;
+    [Tooltip("Controls how long it takes for scene to reload")]
+    [SerializeField] float delay = 2f;
     [SerializeField] ParticleSystem deathExplosion;
-    [SerializeField] ParticleSystem enemyDeath;
 
     private void OnTriggerEnter(Collider other)
     {
