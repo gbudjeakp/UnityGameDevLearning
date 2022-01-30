@@ -34,8 +34,8 @@ public class Enemy : MonoBehaviour
         if (enemyHitPoints < 1)
         {
             KillEnemy();
+            ScoreCounter();
         }
-        ScoreCounter();
 
     }
 

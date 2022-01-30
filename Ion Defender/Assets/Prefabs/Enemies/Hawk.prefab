@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 8215027067888802038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -27.496748, y: 5.45, z: -19.466122}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1.51}
   m_Children:
   - {fileID: 8217707663874176424}
   m_Father: {fileID: 0}
@@ -272,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDeathVfx: {fileID: 1695688545139133936, guid: 611c6e5987124344fb519f5a7f9e6ae8, type: 3}
-  parent: {fileID: 0}
   increaseBy: 20
   enemyHitPoints: 4
 --- !u!1 &8215344796485718890

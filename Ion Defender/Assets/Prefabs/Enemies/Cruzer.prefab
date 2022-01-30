@@ -218,7 +218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDeathVfx: {fileID: 1695688545139133936, guid: 611c6e5987124344fb519f5a7f9e6ae8, type: 3}
-  parent: {fileID: 0}
   increaseBy: 20
   enemyHitPoints: 2
 --- !u!1 &4567228287093695126
