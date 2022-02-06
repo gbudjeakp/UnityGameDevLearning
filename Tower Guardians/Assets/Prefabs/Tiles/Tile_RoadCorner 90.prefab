@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4408635578376954983, guid: cf4ff9c63271186479a7529bf336fb78, type: 3}
+      propertyPath: isPlacable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8038810627349643199, guid: cf4ff9c63271186479a7529bf336fb78, type: 3}
       propertyPath: m_Name
       value: Tile_RoadCorner 90
