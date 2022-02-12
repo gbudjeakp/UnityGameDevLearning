@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int hitPoint = 5;
+
+    [Tooltip("Adds more health to enemy when they die")]
+    [SerializeField] int difficultyRamp = 1;
+
     int currentHitPoints = 0;
     Enemy enemy;
 
@@ -27,10 +32,11 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHitPoints--;
 
-        if(currentHitPoints < 1)
+        if(currentHitPoints <= 0)
         {
            gameObject.SetActive(false);
             enemy.RewardGold();
+            hitPoint += difficultyRamp;
         }
     }
 }

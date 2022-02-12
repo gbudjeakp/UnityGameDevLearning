@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] GameObject towerPrefab;
+    [SerializeField] Tower towerPrefab;
 
     [SerializeField] bool isPlacable;
     public bool IsPlacable
-    {get { return isPlacable; }}
+    { get { return isPlacable; } }
 
- 
+
     private void OnMouseDown()
     {
 
         if (isPlacable)
         {
-            Vector3 position = transform.position;
-            Instantiate(towerPrefab, position, Quaternion.identity);
-            isPlacable = false;
+            bool isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position);
+            isPlacable = !isPlaced;
         }
 
     }

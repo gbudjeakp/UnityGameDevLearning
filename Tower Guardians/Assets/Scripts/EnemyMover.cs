@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
@@ -22,11 +22,16 @@ public class EnemyMover : MonoBehaviour
     void FindPath()
     {
         path.Clear();
-        GameObject[] waypoints = GameObject.FindGameObjectsWithTag("Path");
+        GameObject parent = GameObject.FindGameObjectWithTag("Path");
 
-        foreach(GameObject waypoint in waypoints)
+        foreach (Transform child in parent.transform)
         {
-            path.Add(waypoint.GetComponent<Waypoint>());
+            Waypoint waypoint = child.GetComponent<Waypoint>();
+            if (waypoint != null)
+            {
+                path.Add(waypoint);
+            }
+
         }
     }
 
@@ -46,13 +51,19 @@ public class EnemyMover : MonoBehaviour
             //Helps our enemy face the direction its looking at 
             transform.LookAt(endPosition);
 
-            while(travelPercent < 1){
+            while (travelPercent < 1)
+            {
                 travelPercent += Time.deltaTime * speed;
                 transform.position = Vector3.Lerp(startPosition, endPosition, travelPercent);
                 yield return new WaitForEndOfFrame();
             }
 
         }
+        FinishPath();
+    }
+
+    private void FinishPath()
+    {
         enemy.StealGold();
         gameObject.SetActive(false);
     }
