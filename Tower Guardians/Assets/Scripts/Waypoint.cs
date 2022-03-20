@@ -10,6 +10,26 @@ public class Waypoint : MonoBehaviour
     public bool IsPlacable
     { get { return isPlacable; } }
 
+    GridManager gridManager;
+    Vector2Int coordinates = new Vector2Int();
+
+    private void Awake()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+    }
+
+    private void Start()
+    {
+        if(gridManager != null)
+        {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
+
+            if (!IsPlacable)
+            {
+                gridManager.BlockNode(coordinates);
+            }
+        }
+    }
 
     private void OnMouseDown()
     {
