@@ -180,8 +180,9 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
+  - component: {fileID: 1508295649}
   m_Layer: 0
-  m_Name: RigidBodyFPSController
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -301,6 +302,19 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
+--- !u!114 &1508295649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2ffd7bfdcac72458aa5b7187bea709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 60
 --- !u!1 &191105955267916486
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
+  muzzleFlash: {fileID: 1782184565587523510}
   range: 100
   weaponDamage: 10
 --- !u!1001 &4283181202883142646
@@ -440,6 +455,12 @@ GameObject:
 --- !u!4 &1954032329218892880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4283181202883142646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1782184565587523510 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2579293715142923328, guid: ada2587319194f542957a8c2ae277cb9,
     type: 3}
   m_PrefabInstance: {fileID: 4283181202883142646}
   m_PrefabAsset: {fileID: 0}
