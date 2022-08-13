@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
-    bool  isProvoked = false;
+    bool isProvoked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,7 @@ public class EnemyAI : MonoBehaviour
             ChaseTarget();
         }
 
-        if (distanceToTarget <= navMeshAgent.stoppingDistance+.5)
+        if (distanceToTarget <= navMeshAgent.stoppingDistance + .5)
         {
             AttackTarget();
         }
