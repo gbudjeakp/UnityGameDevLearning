@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chaseRange: 5
+  chaseRange: 13.07
 --- !u!114 &8579623383880884014
 MonoBehaviour:
   m_ObjectHideFlags: 0
