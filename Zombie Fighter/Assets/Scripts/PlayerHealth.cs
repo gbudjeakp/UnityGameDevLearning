@@ -6,14 +6,14 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float playerHealth = 100f;
 
-
-public void PlayerDeath(float damage)
+    public void PlayerDeath(float damage)
     {
         playerHealth -= damage;
 
         if(playerHealth <= 0)
         {
-            Debug.Log("Player has died");
+            //Call handle Death here 
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 }
