@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] float range = 100f;
     [SerializeField] float weaponDamage = 10f;
+    [SerializeField] GameObject hitEffect;
+    [SerializeField] Ammo ammoSlot;
 
     // Update is called once per frame
     void Update()
@@ -21,8 +23,17 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        playMuzzleFlash();
-        ProcessRayCast();
+        int ammoAmount = GetComponent<Ammo>().GetCurrentAmmo();
+        if(ammoAmount > 0)
+        {
+            playMuzzleFlash();
+            ProcessRayCast();
+            GetComponent<Ammo>().ReduceCurrentAmmo();
+        }
+        else
+        {
+            Debug.Log("No Ammo");
+        }
     }
 
     private void playMuzzleFlash()
@@ -35,6 +46,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
         {
+            CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             //Add visual effect
             if (target == null)
@@ -48,5 +60,10 @@ public class Weapon : MonoBehaviour
         {
             return;
         }
+    }
+    private void CreateHitImpact(RaycastHit hit)
+    {
+        GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impact, .1f);
     }
 }

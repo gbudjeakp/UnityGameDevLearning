@@ -187,6 +187,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8972496}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &32789557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954032329219324016, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260609891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &32789562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32789557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a594f072be2464897ddffca652c09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 10
 --- !u!1 &121997086
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +902,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae7f9f9eacff4142b21eb85ae606fdc, type: 3}
+--- !u!1 &352072185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260609891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &352072191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352072185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde317a02ae471b4ea2e338ecb677792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 1345849110}
+  zoomedOutFOV: 60
+  zoomedInFOV: 20
+  zoomInSensitivity: 0.5
+  zoomOutSensitivity: 2
 --- !u!1 &374438749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +2015,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5665425483450671864, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: gameOverCanvas
@@ -2463,6 +2509,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334791332}
   m_CullTransparentMesh: 0
+--- !u!20 &1345849110 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260609891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1362268724
 PrefabInstance:
   m_ObjectHideFlags: 0
