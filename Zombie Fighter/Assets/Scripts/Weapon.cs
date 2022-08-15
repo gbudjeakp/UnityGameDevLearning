@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float range = 100f;
     [SerializeField] float weaponDamage = 10f;
     [SerializeField] GameObject hitEffect;
-    [SerializeField] Ammo ammoSlot;
+
 
     // Update is called once per frame
     void Update()
@@ -48,7 +48,6 @@ public class Weapon : MonoBehaviour
         {
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            //Add visual effect
             if (target == null)
             {
                 return;
