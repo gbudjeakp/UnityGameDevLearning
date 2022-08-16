@@ -11,10 +11,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] float weaponDamage = 10f;
     [SerializeField] GameObject hitEffect;
     [SerializeField] float timeBetweenShots = .5f;
+    [SerializeField] AmmoType ammoType;
     bool canShoot = true;
 
 
-    // Update is called once per frame
+
+
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot == true)
@@ -26,19 +34,18 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        int ammoAmount = GetComponent<Ammo>().GetCurrentAmmo();
-        if (ammoAmount > 0)
+        if (GetComponent<Ammo>()?.GetCurrentAmmo(ammoType) > 0)
         {
             playMuzzleFlash();
             ProcessRayCast();
-            GetComponent<Ammo>().ReduceCurrentAmmo();
+            GetComponent<Ammo>().ReduceCurrentAmmo(ammoType);
         }
         else
         {
             Debug.Log("No Ammo");
         }
         yield return new WaitForSeconds(timeBetweenShots);
-        canShoot=true;
+        canShoot = true;
     }
 
 
